@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "torito"
+version = "0.1.0"
+description = "Interpolation model of the X-ray spectra of AGN obscured by a clumpy, Compton-thick torus"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Francisco Melazzini" }, { name = "Sergey Sazonov" }]
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy", "sherpa"]
+
+[project.urls]
+Homepage = "https://github.com/melazzini/torito"
+
+[tool.setuptools]
+packages = ["torito"]
