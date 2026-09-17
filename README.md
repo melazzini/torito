@@ -39,8 +39,15 @@ pip install .
 TORITO needs NumPy, SciPy and [Sherpa](https://sherpa.readthedocs.io).
 
 The model also needs the interpolation grid, `torito_grid_v1.npz` (about 50 MB), which is
-distributed separately. **A download link will be added here.** TORITO looks for the file
-in this order:
+distributed separately, on Zenodo:
+[doi:10.5281/zenodo.22819418](https://doi.org/10.5281/zenodo.22819418).
+
+```bash
+mkdir -p ~/.torito
+curl -L -o ~/.torito/torito_grid_v1.npz https://zenodo.org/records/22819419/files/torito_grid_v1.npz
+```
+
+TORITO looks for the file in this order:
 
 1. the path given to `torito.load_grid(path)`;
 2. the `TORITO_GRID` environment variable;
@@ -85,8 +92,8 @@ Run the tests with `pytest` (those that evaluate the model are skipped without t
 
 Coming soon:
 
-- a download link for the interpolation grid;
-- more tutorials on fitting observed spectra.
+- more tutorials on fitting observed spectra;
+- an XSPEC table model.
 
 ## Documentation
 
@@ -96,6 +103,12 @@ Coming soon:
 - [Sensitivity maps](docs/sensitivity_maps.md): how strongly each part of the spectrum
   responds to each parameter across the grid.
 
+## Citation
+
+Please cite the paper, and the grid as
+[doi:10.5281/zenodo.22819418](https://doi.org/10.5281/zenodo.22819418).
+
 ## License
 
-MIT, see [LICENSE](LICENSE).
+The code is MIT, see [LICENSE](LICENSE). The interpolation grid is distributed under
+CC BY 4.0.
